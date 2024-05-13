@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Create GIF Image 1 (on the right)
     const gif1 = document.createElement('img');
-    gif1.src = '/images/Hero7gif1.gif'; // Adjust path as necessary
+    gif1.src = 'images/Hero7gif1.gif'; // Adjust path as necessary
     gif1.alt = 'Creative Design 1';
     gif1.style.width = '100px';
     gif1.style.height = 'auto';
