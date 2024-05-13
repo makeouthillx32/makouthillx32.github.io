@@ -1,0 +1,30 @@
+.moving-container {
+    position: fixed;
+    width: 216px;
+    height: 384px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 5px solid black;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: all 0.5s ease; 
+    bottom: 500%; 
+    transform: translateY(-50%);
+}
+.moving-container {
+    transition: transform 0.5s ease, right 0.5s ease, bottom 0.5s ease; /* Smooth transitions */
+    will-change: transform, right, bottom; /* Optimize for animations */
+}
+
+@media (max-width: 768px) {
+    .moving-container {
+        width: 150px; /* Smaller on mobile */
+        height: 270px; /* Proportional change */
+    }
+}
+
+/* Additional specific positional adjustments could be added here if necessary */

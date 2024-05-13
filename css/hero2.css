@@ -1,0 +1,39 @@
+.hero2 {
+    height: 1000px; /* Ensure this matches your specific Hero 2 height */
+    position: relative; /* Ensures that the positioning is relative to this container */
+}
+
+.model-viewer-container {
+    position: absolute;
+    bottom: -200px;
+    top: -50px; /* Align it exactly with the top of Hero 2 */
+    left: 0; /* Align it exactly with the left of Hero 2 */
+    width: 100%; /* Make it as wide as Hero 2 */
+    height: 120%; /* Make it as tall as Hero 2, no gaps should appear */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%), url('/images/starry-background.jpg') no-repeat center center;
+    background-size: cover; /* Ensure the background covers the entire container */
+}
+
+.model-viewer-container::before {
+    content: ""; /* Necessary for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(246, 0, 0, 0) 30%, rgba(14, 2, 0, 0.957) 100%);
+    opacity: 0.7; /* Adjust opacity to get the desired transparency */
+}
+
+model-viewer {
+    width: 700px; /* Fixed width */
+    height: 900px; /* Fixed height */
+    --model-viewer-auto-rotate-delay: 3s; /* Auto-rotate delay */
+    --model-viewer-camera-controls: true; /* Enable camera controls */
+    transform: translateY(-250px); /* Adjust vertical positioning inside the container */
+    box-shadow: none;
+    border-radius: 0;
+}

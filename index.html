@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unenter.live</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer@latest"></script>
+    <!-- Link to CSS for each hero -->
+    <link rel="stylesheet" href="css/hero1.css">
+    <link rel="stylesheet" href="css/hero2.css">
+    <link rel="stylesheet" href="css/hero3.css">
+    <link rel="stylesheet" href="css/hero4.css">
+    <link rel="stylesheet" href="css/hero5.css">
+    <link rel="stylesheet" href="css/hero6.css">
+    <link rel="stylesheet" href="css/hero7.css">
+    <link rel="stylesheet" href="css/hero8.css">
+    <link rel="stylesheet" href="css/hero9.css">
+    <link rel="stylesheet" href="css/hero10.css">
+    <link rel="stylesheet" href="css/hero11.css">
+    <link rel="stylesheet" href="css/hero12.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/hero1.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/hero1.css"></noscript>
+    <link rel="stylesheet" href="css/hero3.css"> <!-- Load hero3 CSS early as specified in JS -->
+    
+    <style>
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(41, 41, 42, 0.8);
+            padding: 10px 0 10px 10px; /* Top, Right, Bottom, Left */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        /* Preloader Style */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div class="sticky-header">
+        <img src="images/burungingcoinggif-ezgif.com-resize.gif" alt="Unenter.live GIF" style="width: 70px; height: 70px;">
+        <div style="font-size: 1.5rem;">Unenter.live</div>
+    </div>
+
+    <div id="preloader">
+        <img src="/images/burungingcoinggif-ezgif.com-resize.gif" alt="Loading...">
+    </div>    
+
+    <!-- Hero Sections -->
+<div class="hero1 h-4 bg-[#29292A]" style="margin-top: 8vh;"></div>
+<script src="js/hero1.js"></script>
+
+<div class="hero2 h-screen bg-white shadow-effect" style="height: 910px;"></div>
+<script src="js/hero2.js"></script>
+
+<div class="hero3 h-screen bg-[#FB0007]" style="height: 165px;">
+    <div id="youtube-animated" class="youtube-text">YouTube</div>
+</div>
+<script src="js/hero3.js"></script>
+
+<div class="hero4 h-screen bg-white shadow-effect" style="height: 610px;"></div>
+<script src="js/hero4.js"></script>
+
+<div class="hero5 h-screen bg-gradient-to-r from-[#00e701] to-[#0b0e0f]" style="height: 1100px;"></div>
+<script src="js/hero5.js"></script>
+
+<div class="hero6 h-screen bg-gradient-to-br from-[#9146FF] to-[#772CE8] shadow-effect" style="height: 1000px;"></div>
+<script src="js/hero6.js"></script>
+
+<div id="hero7" class="h-screen bg-[#4a3191] shadow-effect" style="height: 250px;"></div>
+<script src="js/hero7.js"></script>
+
+<div class="hero8 h-screen shadow-effect" style="background: linear-gradient(45deg, #1DA1F2, #6dd5ed); opacity: 0.95; height: 575px;"></div>
+<script src="js/hero8.js"></script>
+
+<!-- Hero 9: Discord Ad Page -->
+<div class="hero9 h-screen bg-gradient-to-br from-[#5865F2] to-[#404EED]" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; max-height: 1000px; height: 100vh;">
+    <div style="text-align: center; width: 100%; max-width: 1000px;">
+        <h2 style="color: white; font-size: 40px; margin-bottom: 100px;">Join Our Discord Community</h2>
+        <img src="images/dissycord.gif" alt="Discord Community" style="width: 100%; height: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+        <button onclick="window.location.href='https://discord.gg/yVZT2tGW96';" style="padding: 15px 30px; margin-top: 20px; background-color:#008000; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; text-transform: uppercase;">Join Now</button>
+    </div>
+</div>
+<script src="js/hero9.js"></script>
+
+<div id="hero10-container" class="h-screen bg-[#000000]" style="height: 675px;"></div>
+<script src="js/hero10.js"></script>
+
+<div id="hero11-container" class="h-screen bg-white" style="height: 100px;"></div>
+<script src="js/hero11.js"></script>
+
+<div id="hero12-container" class="h-screen bg-[#111112]" style="height: 300px; background-image: url('images/star-background.png'); background-repeat: repeat; background-size: 600px 600px; background-position: center; background-color: transparent;"></div>
+<script src="js/hero12.js"></script>
+    
+
+
+   <!-- Dynamic Script Loading -->
+   <!-- Dynamic Script and Style Loading -->
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function loadResource(type, path) {
+            return new Promise((resolve, reject) => {
+                let element;
+                if (type === 'script') {
+                    element = document.createElement('script');
+                    element.src = path;
+                } else if (type === 'style') {
+                    element = document.createElement('link');
+                    element.href = path;
+                    element.rel = 'stylesheet';
+                    element.type = 'text/css';
+                }
+    
+                element.onload = resolve;
+                element.onerror = reject;
+    
+                if (type === 'script') {
+                    document.body.appendChild(element);
+                } else if (type === 'style') {
+                    document.head.appendChild(element);
+                }
+            });
+        }
+    
+    // Define the load order of scripts and styles
+    Promise.resolve()
+    .then(() => loadResource('style', 'css/hero3.css'))
+    .then(() => loadResource('script', 'js/hero3.js'))
+    .then(() => loadResource('style', 'css/hero2.css'))
+    .then(() => loadResource('script', 'js/hero2.js'))
+    .then(() => loadResource('style', 'css/hero4.css'))
+    .then(() => loadResource('script', 'js/hero4.js'))
+    .then(() => loadResource('style', 'css/hero5.css'))
+    .then(() => loadResource('script', 'js/hero5.js'))
+    .then(() => loadResource('style', 'css/hero6.css'))
+    .then(() => loadResource('script', 'js/hero6.js'))
+    .then(() => loadResource('style', 'css/hero7.css'))
+    .then(() => loadResource('script', 'js/hero7.js'))
+    .then(() => loadResource('style', 'css/hero8.css'))
+    .then(() => loadResource('script', 'js/hero8.js'))
+    .then(() => loadResource('style', 'css/hero10.css'))
+    .then(() => loadResource('script', 'js/hero10.js'))
+    .then(() => loadResource('style', 'css/hero11.css'))
+    .then(() => loadResource('script', 'js/hero11.js'))
+    .then(() => loadResource('style', 'css/hero12.css'))
+    .then(() => loadResource('script', 'js/hero12.js'))
+    .then(() => loadResource('style', 'css/hero9.css'))
+    .then(() => loadResource('script', 'js/hero9.js'))
+    .then(() => loadResource('style', 'css/hero1.css'))
+    .then(() => loadResource('script', 'js/hero1.js'))
+    .catch(error => console.error('Error loading resources:', error));
+
+    // Hide the preloader once all content is fully loaded
+    window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            preloader.style.display = 'none';
+        }
+    });
+});
+</script>
+</body>
+</html>

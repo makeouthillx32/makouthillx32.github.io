@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Same font as other heroes */
+}
+
+.hero3 {
+    height: 165px; /* Fixed height for Hero 3 */
+    background-color: #FB0007; /* Red line background */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative;
+}
+
+.youtube-text {
+    color: white;
+    font-size: 3rem; /* Adjusted font size */
+    font-weight: 700;
+    display: flex;
+    gap: 0.2rem;
+    padding-right: 640px; /* Adjust this value for the desired left offset */
+    transform: translateX(-40px); /* Counteracts the padding to maintain centering */
+}
+
+.letter {
+    display: inline-block;
+    animation: dance 1s infinite alternate; /* Apply dancing animation to each letter */
+    transition: transform 0.2s;
+}
+
+@keyframes dance {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Amount of "dancing" movement */
+    }
+}

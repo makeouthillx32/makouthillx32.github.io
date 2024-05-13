@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.shadow-effect {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.hero6 {
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.rounded-xl {
+    border-radius: 12px;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+#video-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Base button styles */
+.visit-channel-button {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    background-color: #9146FF; /* Twitch purple */
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.visit-channel-button::before, .visit-channel-button::after {
+    content: '';
+    position: absolute;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.visit-channel-button::before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.visit-channel-button::after {
+    top: -100%;
+    right: 0;
+    bottom: -100%;
+    left: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(145, 70, 255, 0.8));
+    opacity: 0;
+    transform: scale(1.2);
+}
+
+.visit-channel-button:hover {
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(145, 70, 255, 0.8);
+    transform: scale(1.1);
+}
+
+.visit-channel-button:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.visit-channel-button:hover::after {
+    opacity: 1;
+    animation: diagonal-move 0.8s forwards ease-out;
+}
+
+@keyframes diagonal-move {
+    0% {
+        transform: translateY(0) translateX(0) scale(1.2);
+    }
+    100% {
+        transform: translateY(100%) translateX(-100%) scale(1.5);
+    }
+}
+
+/* "Did you know" section styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a.underline {
+    text-decoration: underline;
+}

@@ -1,0 +1,42 @@
+.discord-image img {
+    transition: transform 0.3s ease;
+}
+
+.discord-image img.hover-effect {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.join-button {
+    background-color: #008000;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.join-button.hover-effect {
+    background-color: #00a000; /* Lighten the button color on hover */
+    transform: translateY(-5px); /* Raise the button slightly */
+}
+
+@media (max-width: 768px) {
+    .hero9 h2 {
+        font-size: calc(3vw + 1vh + 0.5em); /* Larger font size for smaller screens */
+    }
+
+    .hero9 button {
+        padding: 1.5vw 3vw;
+        font-size: calc(1.5vw + 1vh); /* Slightly larger button on small screens */
+    }
+}
+
+@media (max-height: 500px) {
+    .hero9 {
+        height: auto; /* Switches to auto height on very small height screens */
+        padding: 10px 0; /* Less vertical padding to fit tight spaces */
+    }
+}

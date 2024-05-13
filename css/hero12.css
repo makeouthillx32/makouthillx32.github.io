@@ -1,0 +1,144 @@
+#hero12-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;  /* Set height to auto to accommodate wrapping */
+    background-color: transparent; /* Make background transparent */
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping of child elements */
+    justify-content: center;
+    align-items: center;
+    max-width: 800px; /* Adjust this based on your preferred max width */
+    width: 100%;
+}
+
+.social-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 110px; /* Fixed width */
+    height: 120px; /* Fixed height */
+    margin: 10px;
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+.social-icon img {
+    width: 60%;
+    height: auto;
+}
+
+.label-text, .action-text {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Poppins'; /* Applying the Gothic font */
+}
+
+
+@media (max-width: 600px) {
+    .social-icons {
+        justify-content: space-around;
+    }
+
+    .social-icon {
+        width: 80px; /* Slightly reduce size on smaller screens */
+        height: 80px;
+    }
+}
+
+@media (max-width: 400px) {
+    .social-icons {
+        flex-direction: column; /* Stack icons vertically */
+    }
+
+    .social-icon {
+        width: 100%; /* Allow icons to take full width */
+        height: auto; /* Adjust height automatically */
+        margin: px 0; /* Adjust margin for vertical stacking */
+    }
+}
+
+/* Additional styles to ensure visibility */
+#hero12-container .social-icon .label-text {
+    opacity: 1; /* Make sure text is fully opaque */
+}
+/* Existing styles */
+.hero12 .social-icon .action-text {
+    color: #fff; /* Ensure high contrast text color */
+    font-family: 'Inter', sans-serif; /* Improved font-family */
+    font-size: 1.2em; /* Larger font size for better visibility */
+    font-weight: bold; /* Bolder text for better readability */
+    text-shadow: 1px 1px 2px rgb(255, 255, 255); /* Text shadow for better depth */
+}
+.hero12 {
+    background: rgba(255, 251, 251, 0.6); /* Semi-transparent background for text container */
+    /* Blur effect for background */
+}
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+social-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px; /* Maintain the increased width */
+    height: 120px; /* Maintain the increased height */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #fff; /* 1px wide white border */
+    border-radius: 0px; /* No rounded corners */
+    background: rgba(255, 255, 255, 0); /* Fully transparent background */
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slight increase on hover for interactive effect */
+}
+
+
+
+img {
+    width: 80px; /* Maintain larger image size */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .social-icons {
+        justify-content: space-around;
+    }
+
+    .social-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 400px) {
+    .social-icons {
+        flex-direction: column;
+    }
+
+    .social-icon {
+        width: 100%;
+        height: auto;
+        margin: 5px 0;
+    }
+}
+
+/* New styles for push down animation */
+.social-icon:active {
+    transform: translateY(4px); /* Pushes the button down on click */
+}
