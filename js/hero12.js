@@ -5,9 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
         return; // Exit if container is not found
     }
 
+    const wrapper = document.createElement('div');
+    wrapper.className = 'social-icons-wrapper';
+    container.appendChild(wrapper);
+
     const icons = document.createElement('div');
     icons.className = 'social-icons';
-    container.appendChild(icons);
+    wrapper.appendChild(icons);
 
     const socialLinks = [
         { href: 'https://youtube.com/@unenter', imgSrc: 'images/youtube-icon.png', alt: 'YouTube', action: 'Subscribe' },
@@ -35,5 +39,4 @@ document.addEventListener('DOMContentLoaded', function() {
         a.appendChild(actionText);
         icons.appendChild(a);
     });
-
 });
