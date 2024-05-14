@@ -1,3 +1,4 @@
+/* hero5.css */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -5,14 +6,15 @@ body {
 
 .hero5 {
     background: linear-gradient(to right, #00e701, #0b0e0f);
-    margin: 0; /* No extra margin */
-    padding: 0; /* No extra padding */
+    margin: 0;
+    padding: 0;
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     flex-direction: column;
+    overflow: hidden; /* Ensure no overflow */
 }
 
 .kick-container {
@@ -21,9 +23,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1200px; /* Adjust this value as necessary */
+    max-width: 1200px;
     width: 100%;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .kick-left-column, .kick-right-column {
@@ -136,4 +139,127 @@ body {
 
 .plus-button:hover {
     background-color: #00cc00;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .kick-title {
+        flex-direction: column;
+        gap: 20px; /* Increase gap for better spacing */
+    }
+
+    .kick-title h1 {
+        font-size: 3rem;
+    }
+
+    .kick-logo {
+        height: 150px;
+        width: auto; /* Maintain aspect ratio */
+    }
+
+    .kick-description {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .kick-description p {
+        font-size: 1rem;
+    }
+
+    .kick-watch-button {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+
+    .kick-stream-image {
+        margin-top: 30px;
+        transform: scale(1); /* Adjust initial scale */
+    }
+
+    .kick-did-you-know h3 {
+        font-size: 1.5rem;
+    }
+
+    .kick-did-you-know ul {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .kick-did-you-know ul li {
+        font-size: 1rem;
+    }
+
+    .separator-bar {
+        width: 100%; /* Make the bar horizontal */
+        height: 4px; /* Adjust height for horizontal bar */
+        margin: 10px 0; /* Add margin to separate elements */
+    }
+}
+
+@media (max-width: 600px) {
+    .kick-title h1 {
+        font-size: 2.5rem;
+    }
+
+    .kick-logo {
+        height: 100px;
+        width: auto; /* Maintain aspect ratio */
+    }
+
+    .kick-description p {
+        font-size: 0.9rem;
+    }
+
+    .kick-watch-button {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+
+    .kick-did-you-know h3 {
+        font-size: 1.2rem;
+    }
+
+    .kick-did-you-know ul li {
+        font-size: 0.9rem;
+    }
+
+    .separator-bar {
+        width: 100%; /* Make the bar horizontal */
+        height: 4px; /* Adjust height for horizontal bar */
+        margin: 10px 0; /* Add margin to separate elements */
+    }
+}
+
+@media (max-width: 400px) {
+    .kick-title h1 {
+        font-size: 2rem;
+    }
+
+    .kick-logo {
+        height: 80px;
+        width: auto; /* Maintain aspect ratio */
+    }
+
+    .kick-description p {
+        font-size: 0.8rem;
+    }
+
+    .kick-watch-button {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+
+    .kick-did-you-know h3 {
+        font-size: 1rem;
+    }
+
+    .kick-did-you-know ul li {
+        font-size: 0.8rem;
+    }
+
+    .separator-bar {
+        width: 100%; /* Make the bar horizontal */
+        height: 4px; /* Adjust height for horizontal bar */
+        margin: 10px 0; /* Add margin to separate elements */
+    }
 }
