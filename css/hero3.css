@@ -38,3 +38,28 @@ body {
         transform: translateY(-10px); /* Amount of "dancing" movement */
     }
 }
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .youtube-text {
+        font-size: 2.5rem; /* Reduce font size on smaller screens */
+        padding-right: 240px; /* Adjust padding for smaller screens */
+        transform: translateX(-20px); /* Adjust transform for centering */
+    }
+}
+
+@media (max-width: 600px) {
+    .youtube-text {
+        font-size: 2rem; /* Further reduce font size on very small screens */
+        padding-right: 120px; /* Adjust padding for smaller screens */
+        transform: translateX(-10px); /* Adjust transform for centering */
+    }
+}
+
+@media (max-width: 400px) {
+    .youtube-text {
+        font-size: 1.5rem; /* Further reduce font size on the smallest screens */
+        padding-right: 60px; /* Adjust padding for smallest screens */
+        transform: translateX(-5px); /* Adjust transform for centering */
+    }
+}
