@@ -1,8 +1,9 @@
+// hero1.js
 document.addEventListener('DOMContentLoaded', function() {
     const observerContainer = document.createElement('div');
     observerContainer.className = 'moving-container';
     observerContainer.style.cssText = `
-        position: fixed; width: 180px; height: 320px; background: rgba(0, 0, 0, 0.8);
+        position: fixed; background: rgba(0, 0, 0, 0.8);
         border: 5px solid black; border-radius: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         overflow: hidden; display: flex; justify-content: center; align-items: center;
         zIndex: 10000; transition: all 0.5s ease; top: 50%; transform: translateY(-50%);

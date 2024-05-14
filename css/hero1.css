@@ -1,7 +1,8 @@
+/* hero1.css */
 .moving-container {
     position: fixed;
-    width: 216px;
-    height: 384px;
+    width: 180px;
+    height: 320px;
     background: rgba(0, 0, 0, 0.8);
     border: 5px solid black;
     border-radius: 30px;
@@ -11,20 +12,23 @@
     justify-content: center;
     align-items: center;
     z-index: 10000;
-    transition: all 0.5s ease; 
-    bottom: 500%; 
+    transition: all 0.5s ease;
+    top: 50%;
     transform: translateY(-50%);
-}
-.moving-container {
-    transition: transform 0.5s ease, right 0.5s ease, bottom 0.5s ease; /* Smooth transitions */
-    will-change: transform, right, bottom; /* Optimize for animations */
 }
 
 @media (max-width: 768px) {
     .moving-container {
-        width: 150px; /* Smaller on mobile */
-        height: 270px; /* Proportional change */
+        width: 120px;
+        height: 200px;
+        border-width: 3px;
     }
 }
 
-/* Additional specific positional adjustments could be added here if necessary */
+@media (max-width: 480px) {
+    .moving-container {
+        width: 100px;
+        height: 150px;
+        border-width: 2px;
+    }
+}
