@@ -13,8 +13,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%), url('/images/starry-background.png') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%), url('../images/starry-background.png') no-repeat center center;
     background-size: cover; /* Ensure the background covers the entire container */
+    pointer-events: none; /* Prevent interaction with the container */
 }
 
 .model-viewer-container::before {
@@ -36,4 +37,6 @@ model-viewer {
     transform: translateY(-250px); /* Adjust vertical positioning inside the container */
     box-shadow: none;
     border-radius: 0;
+    pointer-events: auto; /* Allow interaction with the GLB model */
+    z-index: 3; /* Ensure it's above other elements */
 }
