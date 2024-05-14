@@ -18,11 +18,12 @@
 .social-icons-wrapper {
     display: flex;
     justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    align-items: flex-start; /* Align items to the top */
     max-height: 400px; /* Set a fixed max height */
     overflow-y: auto; /* Enable vertical scrolling */
     width: 100%;
     margin-top: -20px; /* Move the wrapper down by 10px */
+    padding-top: 20px; /* Add padding to the top to avoid cutting off elements */
 }
 
 .social-icons {
@@ -109,6 +110,7 @@
 @media (max-width: 400px) {
     .social-icons-wrapper {
         max-height: 300px; /* Adjust height for very small screens */
+        padding-top: 20px; /* Ensure padding on smaller screens as well */
     }
 
     .social-icons {
