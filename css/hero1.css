@@ -19,16 +19,16 @@
 
 @media (max-width: 768px) {
     .moving-container {
-        width: 120px;
-        height: 200px;
-        border-width: 3px;
+        width: 135px;
+        height: 24"px;
+        border-width: 2px;
     }
 }
 
 @media (max-width: 480px) {
     .moving-container {
-        width: 100px;
-        height: 150px;
+        width: 90px;
+        height: 160px;
         border-width: 2px;
     }
 }
