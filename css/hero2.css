@@ -6,7 +6,7 @@
 .model-viewer-container {
     position: absolute;
     bottom: -200px;
-    top: -50px; /* Align it exactly with the top of Hero 2 */
+    top: -150px; /* Align it exactly with the top of Hero 2 */
     left: 0; /* Align it exactly with the left of Hero 2 */
     width: 100%; /* Make it as wide as Hero 2 */
     height: 120%; /* Make it as tall as Hero 2, no gaps should appear */
