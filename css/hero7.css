@@ -1,3 +1,4 @@
+/* hero7.css */
 #hero7 {
     position: relative;
     width: 100%;
@@ -9,19 +10,107 @@
     overflow: hidden;
 }
 
-#hero7 img {
+/* Container for GIFs and text */
+.hero7-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-wrap: nowrap; /* Prevent stacking */
+}
+
+/* Wrapper for each GIF and caption */
+.gif-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero7-container img {
+    width: 150px;
+    height: auto;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-#hero7 img:hover {
-    transform: scale(1.1) scaleX(-1);  
+.hero7-container img:hover {
+    transform: scale(1.1);
     opacity: 0.8;
-  }
-  
-
-#hero7 div {
-    text-align: center;
-    color: white;
-    font-size: 16px;
 }
 
+.hero7-text {
+    font-size: 2rem;
+    white-space: nowrap;
+    text-align: center;
+    color: white;
+    margin: 0 20px;
+}
+
+.hero7-caption {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero7 {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .hero7-container {
+        flex-direction: row;
+        flex-wrap: nowrap; /* Prevent stacking */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .gif-wrapper {
+        flex: 1 1 auto; /* Flex items take up auto space */
+        margin: 10px;
+        max-width: 80px; /* Adjust maximum width for GIFs on smaller screens */
+    }
+
+    .hero7-container img {
+        width: 80px; /* Adjust image size */
+    }
+
+    .hero7-text {
+        font-size: 1.2rem; /* Further reduce the font size */
+        margin: 10px;
+        flex: 1 1 auto; /* Text takes up remaining space */
+    }
+
+    .hero7-caption {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero7-container img {
+        width: 100px; /* Increase the image size compared to previous adjustment */
+    }
+
+    .hero7-text {
+        font-size: 1rem; /* Further reduce the font size */
+        margin: 5px; /* Reduce margin */
+    }
+
+    .gif-wrapper {
+        margin: 5px;
+    }
+
+    .hero7-caption {
+        font-size: 0.75rem;
+    }
+}
