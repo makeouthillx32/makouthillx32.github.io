@@ -20,7 +20,7 @@
 @media (max-width: 768px) {
     .moving-container {
         width: 135px;
-        height: 24px;
+        height: 240px;
         border-width: 2px;
     }
 }
