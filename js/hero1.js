@@ -53,7 +53,7 @@ function adjustPosition(className) {
 
     if (className === 'hero2') {
         observerContainer.style.left = '10%';  // Adjust this value to position horizontally
-        observerContainer.style.top = '85%';  // Adjust this value to position vertically
+        observerContainer.style.top = '80%';  // Adjust this value to position vertically
         observerContainer.style.transform = 'translate(-50%, -50%)';  // Fine-tune transform as needed
     } else if (['hero3', 'hero4'].includes(className)) {
         const hero2 = document.querySelector('.hero2').offsetTop;

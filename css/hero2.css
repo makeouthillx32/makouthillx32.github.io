@@ -34,7 +34,7 @@ model-viewer {
     height: 900px; /* Fixed height */
     --model-viewer-auto-rotate-delay: 3s; /* Auto-rotate delay */
     --model-viewer-camera-controls: true; /* Enable camera controls */
-    transform: translateY(-250px); /* Adjust vertical positioning inside the container */
+    transform: translateY(-150px); /* Adjust vertical positioning inside the container */
     box-shadow: none;
     border-radius: 0;
     pointer-events: auto; /* Allow interaction with the GLB model */
