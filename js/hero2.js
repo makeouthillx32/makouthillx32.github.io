@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Model Viewer Container created:', modelViewerContainer);
 
         const modelViewer = document.createElement('model-viewer');
-        modelViewer.src = 'images/unenterlogom.glb3'; // Update the path if necessary
+        modelViewer.src = 'images/unenterlogom.glb'; // Update the path if necessary
         modelViewer.setAttribute('alt', '3D model of an object');
         modelViewer.setAttribute('auto-rotate', '');
         modelViewer.setAttribute('camera-controls', '');
