@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add the affiliate link
     const link = document.createElement('a');
-    link.href = 'https://www.obsbot.com/store/products/tiny-2=';
+    link.href = 'https://shareasale.com/r.cfm?b=2561288&u=4190696&m=114666&urllink=&afftrack=';
     link.textContent = 'Enjoy $20 OFF OBSBOT Tail Air on Mother\'s Day';
     link.className = 'affiliate-button';
     affiliateAd.appendChild(link);
