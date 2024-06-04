@@ -32,3 +32,132 @@
         border-width: 2px;
     }
 }
+#toast-container {
+    position: fixed;
+    top: 20vh; /* Position at the top */
+    right: 2vw;
+    z-index: 1000;
+}
+
+.toast {
+    background-color: rgba(33, 33, 33, 0.9);
+    color: #ffffff;
+    padding: 1.5vh 2vw;
+    margin-bottom: 1vh;
+    border-radius: 0.5vw;
+    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-10vh);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    max-width: 60vw; /* Limit width */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast.hide {
+    opacity: 0;
+    transform: translateY(-10vh);
+}
+
+.toast::before {
+    content: "";
+    width: 0.8vw;
+    height: 100%;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    border-radius: 0.5vw 0 0 0.5vw;
+    margin-right: 1vw;
+    transition: height 0.5s;
+}
+
+.toast:hover::before {
+    height: 110%;
+}
+
+.toast:hover {
+    box-shadow: 0 0.8vw 1.6vw rgba(0, 0, 0, 0.2);
+    transform: translateY(-1vh);
+}
+
+.toast p {
+    margin: 0;
+    font-size: 1.4vw;
+}
+
+.toast h3 {
+    margin: 0 0 0.5vh 0;
+    font-size: 1.6vw;
+    font-weight: 600;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+
+.toast.show {
+    animation: slide-in 0.5s forwards;
+}
+
+.toast.hide {
+    animation: slide-out 0.5s forwards;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #toast-container {
+        top: 10vh; /* Adjust top position for smaller screens */
+        right: 10vw;
+    }
+
+    .toast {
+        padding: 1vh 1.5vw;
+        font-size: 4vw;
+    }
+
+    .toast h3 {
+        font-size: 10w;
+    }
+
+    .toast p {
+        font-size: 10vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #toast-container {
+        top: 10vh; /* Adjust top position for mobile screens */
+        left: 50vw;
+        right: 10vw;
+    }
+
+    
+
+   
+  
+}
