@@ -1,13 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const API_KEY = 'AIzaSyCBCnOp3FiWhmyjMPAQfFriL58zv_A-gtY'; // Replace with your API key
-    const CHANNEL_ID = 'UCvuBk9XEgxn1WUkVvKzTd7g'; // Replace with your channel ID
-    const MAX_RESULTS = 1;
-
     const hero4Container = document.querySelector('.hero4');
     if (!hero4Container) {
         console.error('Hero4 container not found');
-        return
+        return;
     }
+
     // Create the main container
     const youtubeContainer = document.createElement('div');
     youtubeContainer.classList.add('youtube-container');
@@ -76,46 +73,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     hero4Container.appendChild(youtubeContainer);
 
-  // Helper function to handle API fetch and response
-    function fetchYouTubeAPI(url, handleData, handleError) {
-        fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            if (data.items && data.items.length > 0) {
-                handleData(data);
-            } else {
-                console.log('No data found.');
-                handleError('No items found in response.');
+    // Fetch data from your Vercel serverless API
+    const apiUrl = 'https://website-api-git-main-tylers-projects-e3c386db.vercel.app/api/youtube';
+
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
             }
+            return response.json();
+        })
+        .then(data => {
+            const channel = data.channel;
+            const latestVideo = data.latestVideo;
+
+            // Set channel information
+            mainChannelThumbnail.src = channel.thumbnail;
+            mainChannelName.textContent = channel.title;
+            mainChannelDescription.textContent = channel.description;
+            mainChannelLink.href = channel.link;
+
+            // Set latest video information
+            latestVideoThumbnail.src = latestVideo.thumbnail;
+            latestVideoTitle.textContent = latestVideo.title;
+            latestVideoDescription.textContent = latestVideo.description;
+            latestVideoLink.href = latestVideo.link;
         })
         .catch(error => {
-            console.error('API request failed:', error);
-            handleError(error);
+            console.error('Error fetching data from API:', error);
         });
-    }
-
-    // Fetch Channel Info
-    const channelInfoURL = `https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${CHANNEL_ID}&key=${API_KEY}`;
-    fetchYouTubeAPI(channelInfoURL, data => {
-        const channelInfo = data.items[0].snippet;
-        mainChannelThumbnail.src = channelInfo.thumbnails.high.url;
-        mainChannelName.textContent = channelInfo.title;
-        mainChannelDescription.textContent = channelInfo.description;
-        mainChannelLink.href = `https://www.youtube.com/channel/${CHANNEL_ID}`;
-    }, error => {
-        console.log('Error fetching channel info:', error);
-    });
-
-    // Fetch Latest Video
-    const latestVideoURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&maxResults=${MAX_RESULTS}&order=date&type=video&key=${API_KEY}`;
-    fetchYouTubeAPI(latestVideoURL, data => {
-        const videoInfo = data.items[0].snippet;
-        const videoId = data.items[0].id.videoId;
-        latestVideoThumbnail.src = videoInfo.thumbnails.high.url;
-        latestVideoTitle.textContent = videoInfo.title;
-        latestVideoDescription.textContent = videoInfo.description;
-        latestVideoLink.href = `https://www.youtube.com/watch?v=${videoId}`;
-    }, error => {
-        console.log('Error fetching latest video:', error);
-    });
 });
